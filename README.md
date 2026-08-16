@@ -12,9 +12,9 @@ A small CRUD (Create, Read, Update, Delete) API for managing a to-do list, built
 
 1\. Clone this repo and open a terminal in the project folder.
 
-2\. Install dependencies:
+2\. Install dependencies: `npm install`
 
-3\. Start the server:
+3\. Start the server: `node index.js`
 
 4\. The API is now running at http://localhost:3000
 
@@ -26,23 +26,23 @@ A small CRUD (Create, Read, Update, Delete) API for managing a to-do list, built
 
 
 
-| Method | Path          | Description                  |
+| Method | Path | Description |
 
-|--------|---------------|-------------------------------|
+|--------|------|-------------|
 
-| GET    | /             | API info                     |
+| GET | / | API info |
 
-| GET    | /health       | Health check                 |
+| GET | /health | Health check |
 
-| GET    | /tasks        | List all tasks               |
+| GET | /tasks | List all tasks |
 
-| GET    | /tasks/:id    | Get a single task by id      |
+| GET | /tasks/:id | Get a single task by id |
 
-| POST   | /tasks        | Create a new task            |
+| POST | /tasks | Create a new task |
 
-| PUT    | /tasks/:id    | Update a task's title/done   |
+| PUT | /tasks/:id | Update a task's title/done |
 
-| DELETE | /tasks/:id    | Delete a task                |
+| DELETE | /tasks/:id | Delete a task |
 
 
 
@@ -50,15 +50,11 @@ A small CRUD (Create, Read, Update, Delete) API for managing a to-do list, built
 
 
 
-curl -X POST http://localhost:3000/tasks -H "Content-Type: application/json" -d "{\\"title\\":\\"Buy milk\\"}"
+`curl -X POST http://localhost:3000/tasks -H "Content-Type: application/json" -d "{\\"title\\":\\"Buy milk\\"}"`
 
 
 
-Response:
-
-
-
-{"id":4,"title":"Buy milk","done":false}
+Response: `{"id":4,"title":"Buy milk","done":false}`
 
 
 
