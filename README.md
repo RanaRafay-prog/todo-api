@@ -35,7 +35,7 @@ A small CRUD (Create, Read, Update, Delete) API for managing a to-do list, built
 ## Example request
 
 ```
-curl -X POST http://localhost:3000/tasks -H "Content-Type: application/json" -d "{\\"title\\":\\"Buy milk\\"}"
+curl -X POST http://localhost:3000/tasks -H "Content-Type: application/json" -d "{\\\\"title\\\\":\\\\"Buy milk\\\\"}"
 ```
 
 Response:
@@ -48,7 +48,7 @@ Response:
 
 <!-- Paste your Swagger screenshot here once uploaded to the repo, e.g.: -->
 
-!\[Swagger UI](./swagger-screenshot.png) 
+!\[Swagger UI](./swagger-screenshot.png)
 
 ## The mortality experiment
 
