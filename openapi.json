@@ -1,0 +1,71 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Task API",
+    "version": "1.0.0",
+    "description": "A simple CRUD API for managing a to-do list"
+  },
+  "paths": {
+    "/tasks": {
+      "get": {
+        "summary": "List all tasks",
+        "responses": { "200": { "description": "A list of tasks" } }
+      },
+      "post": {
+        "summary": "Create a new task",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": { "title": { "type": "string" } },
+                "required": ["title"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Task created" },
+          "400": { "description": "Missing title" }
+        }
+      }
+    },
+    "/tasks/{id}": {
+      "get": {
+        "summary": "Get a single task",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": { "200": { "description": "The task" }, "404": { "description": "Not found" } }
+      },
+      "put": {
+        "summary": "Update a task",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "done": { "type": "boolean" }
+                }
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "Updated" }, "404": { "description": "Not found" } }
+      },
+      "delete": {
+        "summary": "Delete a task",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": { "204": { "description": "Deleted" }, "404": { "description": "Not found" } }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "responses": { "200": { "description": "Server is alive" } }
+      }
+    }
+  }
+}
