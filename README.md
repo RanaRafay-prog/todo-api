@@ -62,7 +62,7 @@ Response: `{"id":4,"title":"Buy milk","done":false}`
 
 
 
-!\[Swagger UI](./swagger-screenshot.png)
+Swagger UI screenshot: swagger-screenshot.png
 
 
 
