@@ -44,6 +44,27 @@ A small CRUD (Create, Read, Update, Delete) API for managing a to-do list, built
 
 | DELETE | /tasks/:id | Delete a task |
 
+## Why SQLite
+
+SQLite was chosen because it needs no separate server to install — the whole database is a single file (`tasks.db`) that's created automatically the first time the app runs. This means data now survives a server restart, unlike the in-memory version from Assignment 1.
+
+## Database
+
+The database file `tasks.db` is created automatically in the project folder when the app first runs. It's listed in `.gitignore`, so each fresh clone starts with a clean database and reseeds the 3 example tasks automatically.
+
+## Run it
+
+1. `npm install`
+2. `node index.js`
+3. Visit http://localhost:3000/tasks
+
+## Example SQL query (Stage 4)
+
+I ran `DELETE FROM tasks WHERE done = 1;` in DB Browser for SQLite, which deleted all completed tasks and returned an empty result set. Refreshing the running API's `/tasks` endpoint immediately showed the change with no server restart — proving the API and DB Browser read the same underlying file.
+
+## Database screenshot
+
+![DB Browser screenshot](db-browser-screenshot.png)
 
 
 \## Example request
