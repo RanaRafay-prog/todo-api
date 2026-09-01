@@ -73,7 +73,7 @@ Tasks now live in a named Docker volume (`taskdata`), not in the container itsel
 
 ## Database screenshot
 
-_Add a screenshot here of `psql \dt` + `SELECT * FROM tasks;` (or DBeaver/pgAdmin/TablePlus) once you've run `docker compose up` locally._
+![Postgres data](db-screenshot-postgres.png)
 
 ## Swagger UI
 

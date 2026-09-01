@@ -9,7 +9,7 @@ services:
         condition: service_healthy
 
   db:
-    image: postgres
+    image: postgres:17
     environment:
       POSTGRES_PASSWORD: dev
       POSTGRES_DB: tasks
