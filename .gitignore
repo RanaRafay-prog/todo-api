@@ -1,3 +1,6 @@
 node_modules/
 tasks.db
 .env
+
+login.json
+signup.json
